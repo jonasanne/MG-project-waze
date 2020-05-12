@@ -24,7 +24,7 @@
         ani.play();
         waypoint.destroy();
       },
-      offset: 800
+      offset: 500
     })
   };
 
@@ -47,7 +47,6 @@
     loadAni("./images/animations/carpool-animation/carpool.json", containers[0]);
     loadAni("./images/animations/card-animation/card.json", containers[1]);
     loadAni("./images/animations/invoice-animation/invoice.json", containers[2]);
-
 
     loadSmAni("./images/animations/stadium-animation/stadium.json", containersSmall[0]);
     loadSmAni("./images/animations/city-animation/city.json", containersSmall[1]);
@@ -77,11 +76,12 @@
       viewFactor: 0.5,
 
     })
-    sr.reveal('.feature-extended-image', {
-      duration: 600,
-      scale: 0.9,
+    sr.reveal('.feature-extended-image, .feature-extended-body', {
+      duration: 1000,
+      distance: '40px',
       easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
-      viewFactor: 0.5
+      origin: 'left',
+      interval: 150
     })
   }
 }())
